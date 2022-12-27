@@ -182,7 +182,7 @@ export default class ProfileEdit extends Component {
                   disabled={ isSaveButtonDisable }
                   onClick={ async () => {
                     await this.onHandleClick();
-                    history.push('/profile');
+                    history.push('/trybe-tunes/profile');
                   } }
                 >
                   Salvar
