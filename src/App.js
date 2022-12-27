@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { HashRouter as BrowserRouter} from 'react-router-dom';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import Album from './pages/Album';
@@ -17,12 +18,12 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/trybe-tunes" component={ Login } />
-          <Route exact path="/trybe-tunes/search" component={ Search } />
-          <Route exact path="/trybe-tunes/album/:id" render={ (props) => <Album { ...props } /> } />
-          <Route exact path="/trybe-tunes/favorites" component={ Favorites } />
-          <Route exact path="/trybe-tunes/profile" component={ Profile } />
-          <Route exact path="/trybe-tunes/profile/edit" component={ ProfileEdit } />
+          <Route exact path="/" component={ Login } />
+          <Route exact path="/search" component={ Search } />
+          <Route exact path="/album/:id" render={ (props) => <Album { ...props } /> } />
+          <Route exact path="/favorites" component={ Favorites } />
+          <Route exact path="/profile" component={ Profile } />
+          <Route exact path="/profile/edit" component={ ProfileEdit } />
           <Route component={ NotFound } />
 
         </Switch>

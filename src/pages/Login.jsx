@@ -47,7 +47,7 @@ export default class Login extends Component {
   render() {
     const { isSaveSubmitDisabled, inputName, isLoading, redirect } = this.state;
     if (redirect) {
-      return <Redirect to="/trybe-tunes/search" />;
+      return <Redirect to="/search" />;
     }
     
       if(isLoading){
